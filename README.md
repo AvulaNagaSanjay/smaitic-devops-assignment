@@ -1,0 +1,1 @@
+# SMAITIC Labs DevOps Assignment
