@@ -18,7 +18,6 @@ pipeline {
         }
         stage('Docker Build & Tag') {
             steps {
-                // Multi-platform compile ensuring AMD64 EKS compatibility from ARM runners
                 sh 'docker build --platform linux/amd64 -t ${REGISTRY_USER}/${IMAGE_NAME}:${IMAGE_TAG} .'
                 sh 'docker tag ${REGISTRY_USER}/${IMAGE_NAME}:${IMAGE_TAG} ${REGISTRY_USER}/${IMAGE_NAME}:latest'
             }
