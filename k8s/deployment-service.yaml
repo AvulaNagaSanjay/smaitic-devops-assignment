@@ -18,7 +18,7 @@ spec:
       - name: node-api-container
         image: avulanagasanjay/node-api:latest
         ports:
-        - name: api-web # Required custom named port
+        - name: api-web 
           containerPort: 3000
         resources:
           limits:
@@ -51,4 +51,4 @@ spec:
   ports:
   - name: api-web
     port: 80
-    targetPort: api-web # Maps directly to our named container port
+    targetPort: api-web 
